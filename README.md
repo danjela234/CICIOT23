@@ -1,35 +1,30 @@
-# AI-Enhanced Intrusion Detection Using Explainable Machine Learning for Zero-Day Threats
+# Attack-Disjoint Feature Attribution for Improving Transparency in ML-Based Intrusion Detection Systems
 
-This repository contains the implementation code for my master's thesis focused on zero-day intrusion detection using machine learning and explainable AI techniques.
+This repository contains the implementation code for my master's thesis focused on detecting previously unseen attacks in IoT network traffic using machine learning and explainable AI techniques under an attack-disjoint evaluation methodology.
 
 ## Overview
-The project investigates the use of Random Forest and SHAP (SHapley Additive Explanations) for detecting and interpreting zero-day cyber-attacks in IoT network environments.
+This project implements a comprehensive multi-model intrusion detection framework evaluated under attack-disjoint conditions, where models are trained on one subset of attack categories and tested on entirely different, withheld attack types. Five models are compared: Random Forest, XGBoost, Isolation Forest, One-Class SVM, and Autoencoder. Explainability is analysed using SHAP and LIME.
 
 ## Features
-- Machine learning-based intrusion detection
-- Zero-day attack evaluation
-- Attack-disjoint testing methodology
-- SHAP explainability analysis
-- Confusion matrix and performance visualization
+- Multi-model intrusion detection (Random Forest, XGBoost, Isolation Forest, One-Class SVM, Autoencoder)
+- Attack-disjoint evaluation methodology
+- SHAP and LIME explainability comparison
+- Decision threshold tuning and cost-sensitive learning
+- PCA and t-SNE embedding visualisation
+- Per-attack-type analysis and difficulty ranking
+- Cross-dataset evaluation on UNSW-NB15
+- Ablation study and real-time feasibility analysis
 
 ## Technologies
-- Python
+- Python 3.12
 - Scikit-learn
+- XGBoost
+- TensorFlow/Keras
 - SHAP
+- LIME
 - Pandas
-- NumPy
 - Matplotlib
 
 ## Dataset
-CIC-IoT2023 Dataset:
-https://www.unb.ca/cic/datasets/iotdataset-2023.html
-
-## Repository Contents
-- `Train_Zero_Day.ipynb` – zero-day training experiments
-- `Thesis_Experiment.ipynb` – main thesis experiments
-- `Final_Test.ipynb` – independent testing and evaluation
-- `Exploratory_Data_Analysis.ipynb` – dataset exploration and preprocessing
-
-## Author
-Danjela Kuçi
-Master Thesis – Mälardalen University
+- Primary: CIC-IoT2023
+- Cross-dataset: UNSW-NB15
